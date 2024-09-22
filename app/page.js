@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className='bg-gradient-to-b from-[#23303D] via-[#111111] to-[#1F131D] min-h-screen pb-20 '>
+    <div className='bg-animated-gradient min-h-screen pb-20 '>
       <main>
         <Navbar />
         <HeroSection />

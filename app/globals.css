@@ -27,6 +27,13 @@ body {
   .neon-text {
     text-shadow: -1px -1px 0px cyan, 1px 1px 3px magenta;
   }
+  .neon-border {
+    border: 2px solid transparent;
+    box-shadow: 0 0 2px cyan, 0 0 5px magenta, 0 0 8px cyan, 0 0 12px magenta;
+  }
+  .bg-overlay {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8) 70%);
+  }
 }
 
 @layer base {
@@ -92,4 +99,24 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(90deg, #000000, #050505, #101010);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
 }

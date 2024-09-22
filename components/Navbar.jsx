@@ -20,7 +20,7 @@ import { Button } from '@/components/ui/button';
 export function Navbar() {
   return (
     <div className='flex bg-transparent backdrop-blur-sm h-16 w-full justify-around p-4'>
-      <div className='flex items-center text-3xl font-bold justify-center'>
+      <div className='flex items-center text-3xl neon-text font-bold justify-center'>
         <a href='/'>
           reviral
         </a>
