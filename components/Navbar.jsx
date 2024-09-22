@@ -19,11 +19,9 @@ import { Button } from '@/components/ui/button';
 
 export function Navbar() {
   return (
-    <div className='flex bg-transparent backdrop-blur-sm h-16 w-full justify-around p-4'>
-      <div className='flex items-center text-3xl neon-text font-bold justify-center'>
-        <a href='/'>
-          reviral
-        </a>
+    <div className='sticky top-0 flex bg-transparent backdrop-blur-md h-16 w-full justify-around z-50 p-4'>
+      <div className='flex items-center text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] font-bold justify-center'>
+        <a href='/'>reviral</a>
       </div>
       <NavigationMenu className='w-full max-w-none'>
         <NavigationMenuList className='w-full '>
@@ -53,13 +51,9 @@ export function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className='flex items-center space-x-4'>
-        <Button variant='outline'>
-          Login
-        </Button>
-        <Button variant='secondary'>
-          Get started now
-        </Button>
-        </div>
+        <Button variant='outline'>Login</Button>
+        <Button variant='secondary'>Get started now</Button>
+      </div>
     </div>
   );
 }

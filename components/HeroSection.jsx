@@ -10,15 +10,15 @@ import { Button } from './ui/button';
 export function HeroSection() {
   return (
     <section className='p-20'>
-      <div className='flex flex-col items-center h-fit justify-center'>
-        <h1 className='text-8xl font-medium text-white'>
+      <div className='flex flex-col items-center  h-fit justify-center'>
+        <h1 className='text-8xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
           Create{' '}
-          <div className='relative inline-block'>
+          <div className='text-white relative inline-block'>
             trending
             <NotificationBadge />
           </div>
         </h1>
-        <h1 className='text-8xl font-medium text-white'>
+        <h1 className='text-8xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] '>
           content in <span className=''>minutes.</span>
         </h1>
         <h1 className='mt-4 text-2xl font-normal text-muted-foreground'>
@@ -29,7 +29,11 @@ export function HeroSection() {
           content creation tools. Let <span>reviral</span> break the algorithm
           for you.
         </h1>
-        <Button variant='secondary' size='lg' className='mt-8 text-lg neon-border'>
+        <Button
+          variant='secondary'
+          size='lg'
+          className='mt-8 text-lg neon-border'
+        >
           Get started now
         </Button>
         <div className='mt-8 text-sm text-muted-foreground items-center'>

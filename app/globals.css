@@ -115,8 +115,31 @@ body {
   }
 }
 
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20%,
+  60% {
+    transform: translateY(-2px);
+  }
+
+  40%,
+  80% {
+    transform: translateY(2px);
+  }
+}
+
+.notification-shake {
+  animation: shake 0.3s ease-in-out;
+}
+
 .bg-animated-gradient {
   background: linear-gradient(90deg, #000000, #050505, #101010);
   background-size: 400% 400%;
   animation: gradientMove 20s ease infinite;
 }
+
