@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button';
 
 export function Navbar() {
   return (
-    <div className='sticky top-0 flex bg-transparent backdrop-blur-md h-16 w-full justify-around z-50 p-4'>
+    <div className='sticky top-0 flex bg-black/10 backdrop-blur-md h-16 w-full justify-around z-50 p-4'>
       <div className='flex items-center text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] font-bold justify-center'>
         <a href='/'>reviral</a>
       </div>

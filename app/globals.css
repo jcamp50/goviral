@@ -138,8 +138,11 @@ body {
 }
 
 .bg-animated-gradient {
-  background: linear-gradient(90deg, #000000, #050505, #101010);
+  background: radial-gradient(#000000, #050505, #101010);
   background-size: 400% 400%;
   animation: gradientMove 20s ease infinite;
 }
 
+.bg-radial-gradient {
+  background: radial-gradient(circle, rgb(25, 25, 25) 0%, rgba(0, 0, 0, 1) 80%);
+}
