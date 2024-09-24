@@ -48,7 +48,7 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <section className='w-full py-10 px-20'>
+    <section className='w-full py-10 px-20 mb-10'>
       <div className='flex flex-row'>
         <div className='flex flex-col text-5xl w-1/2 items-start gap-3 font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] mb-8'>
           <h1>
