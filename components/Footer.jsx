@@ -7,7 +7,7 @@ import { DiscordLogoIcon, InstagramLogoIcon } from '@radix-ui/react-icons';
 
 export function Footer() {
   return (
-    <div className='flex flex-col items-center py-8 bg-black text-white'>
+    <div className='flex flex-col items-center py-8  text-white'>
       {/* Separator */}
       <Separator
         orientation='horizontal'

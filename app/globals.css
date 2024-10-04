@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -144,5 +147,6 @@ body {
 }
 
 .bg-radial-gradient {
-  background: radial-gradient(circle, rgb(25, 25, 25) 0%, rgba(0, 0, 0, 1) 80%);
+  background: radial-gradient(circle, rgb(25, 25, 25) 0%, rgb(0, 0, 0) 80%);
 }
+

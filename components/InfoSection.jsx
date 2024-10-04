@@ -6,7 +6,7 @@ import { Templates } from './Templates';
 
 export function InfoSection() {
   return (
-    <div className='flex flex-col gap-36 px-20'>
+    <div className='flex flex-col mt-36 gap-36 px-20'>
       <CreateSteps />
       <ShowCase />
       <Templates />

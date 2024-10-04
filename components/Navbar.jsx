@@ -133,8 +133,8 @@ export function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className='flex items-center space-x-4'>
-        <Button variant='outline'>Login</Button>
-        <Button variant='secondary'>Get started now</Button>
+        <Button className='text-xl h-12'variant='outline'>Login</Button>
+        <Button className='text-xl h-12' variant='secondary'>Get started now</Button>
       </div>
     </div>
   );
@@ -153,10 +153,10 @@ const ListItem = React.forwardRef(
             )}
             {...props}
           >
-            <div className='text-sm font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
+            <div className='text-lg font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
               {title}
             </div>
-            <p className='line-clamp-2 text-sm leading-snug text-muted-foreground'>
+            <p className='line-clamp-2 text-lg leading-snug text-muted-foreground'>
               {children}
             </p>
           </a>

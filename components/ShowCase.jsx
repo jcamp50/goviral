@@ -10,14 +10,11 @@ export function ShowCase() {
               Everything you need, all in one place.
             </h1>
             <p className='text-2xl text-[#d4d4d4]'>
-              Our platform offers everything you need to create stunning videos
-              effortlessly. Choose from a wide range of video niche templates,
-              guided by our powerful AI assistant to ensure your content stands
-              out. With auto-generated captions, 50+ AI voices, and engaging
-              backgrounds, your videos will captivate any audience. Add music,
-              edit with ease, and watch your creations come to life—all in one
-              seamless platform. Whether you're a content creator, marketer, or
-              influencer, we've got you covered from start to finish!
+              Create stunning videos effortlessly with our all-in-one platform.
+              Access niche templates, AI-guided assistance, auto-generated
+              captions, 50+ AI voices, and engaging backgrounds. Add music, edit
+              with ease, and captivate your audience—perfect for creators,
+              marketers, and influencers.
             </p>
           </div>
           <div className='flex flex-grow items-center justify-center'>
@@ -37,16 +34,11 @@ export function ShowCase() {
               Get Guidance from Top Creators in Your Niche.
             </h1>
             <p className='text-2xl text-[#d4d4d4]'>
-              We've trained our AI assistant on insights and strategies from the
-              most successful creators in your niche, ensuring you have access
-              to the secrets of viral success. Whether you're wondering about
-              the best video format, trending topics, or how to optimize
-              engagement, our AI is here to provide immediate, data-driven
-              answers. Say goodbye to uncertainty and follow expert advice
-              tailored to your unique needs—guidance you can trust to elevate
-              your content and take your channel to the top. Start creating with
-              confidence, knowing you have the expertise of the best at your
-              fingertips.
+              Our AI assistant is trained on top creators' strategies, giving
+              you access to the secrets of viral success. From video formats to
+              trending topics and engagement tips, get data-driven, expert
+              advice tailored to your needs. Create confidently with insights
+              from the best.
             </p>
           </div>
         </div>
