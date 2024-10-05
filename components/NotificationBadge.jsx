@@ -36,7 +36,7 @@ export function NotificationBadge() {
     <>
       {visible && (
         <div
-          className={`absolute bg-red-500 text-white text-3xl font-bold rounded-full w-20 h-14 flex items-center justify-center -top-1 -right-6 ${
+          className={`absolute bg-[#9d382f] text-white text-xl font-bold rounded-full w-14 h-10 flex items-center justify-center -top-1 -right-6 ${
             isShaking ? 'notification-shake' : ''
           }`}
         >

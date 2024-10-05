@@ -50,15 +50,12 @@ export function Reviews() {
   return (
     <section className='w-full py-10 px-20 mb-10'>
       <div className='flex flex-row'>
-        <div className='flex flex-col text-5xl w-1/2 items-start gap-3 font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] mb-8'>
+        <div className='flex flex-col text-5xl w-1/2 items-start gap-3 font-medium text-gradient mb-8'>
           <h1>
             Loved by <span className=''>users.</span>
           </h1>
           <h1>
-            Loved by{' '}
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] '>
-              top creators.
-            </span>
+            Loved by <span className='text-gradient '>top creators.</span>
           </h1>
         </div>
         <Carousel
@@ -74,11 +71,11 @@ export function Reviews() {
                   <Card className='shadow-lg h-96 flex flex-col justify-between border-[#111111] bg-[#23303D]/10 backdrop-blur-md'>
                     <CardContent className='p-6 text-white'>
                       <p className='flex items-start justify-center text-foreground text-4xl my-4'>
-                        <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#7b4b73] to-white text-6xl font-bold'>
+                        <span className='text-gradient text-6xl font-bold'>
                           &ldquo;
                         </span>
                         <span className='mx-2 font-light'>{review.review}</span>
-                        <span className='text-transparent bg-clip-text bg-gradient-to-r from-white to-[#7b4b73] text-6xl font-bold leading-none self-end'>
+                        <span className='text-gradient text-6xl font-bold leading-none self-end'>
                           &rdquo;
                         </span>
                       </p>

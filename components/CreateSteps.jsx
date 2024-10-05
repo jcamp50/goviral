@@ -9,7 +9,7 @@ export function CreateSteps() {
       </p1>
       <div className='flex flex-row w-full justify-evenly'>
         <div className='flex flex-row items-center'>
-          <p1 className='text-[200px]  font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
+          <p1 className='text-[200px]  font-medium text-gradient'>
             1
           </p1>
           <Card className='w-80 h-96 bg-white/10 border-transparent backdrop-blur-md z-10 -translate-x-6'>
@@ -24,7 +24,7 @@ export function CreateSteps() {
           </Card>
         </div>
         <div className='flex flex-row items-center'>
-          <p1 className='text-[200px] font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] '>
+          <p1 className='text-[200px] font-medium text-gradient '>
             2
           </p1>
           <Card className='w-80 h-96 bg-white/10 border-transparent backdrop-blur-md z-10 -translate-x-12'>
@@ -40,7 +40,7 @@ export function CreateSteps() {
           </Card>
         </div>
         <div className='flex flex-row items-center'>
-          <p1 className='text-[200px] font-medium text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
+          <p1 className='text-[200px] font-medium text-gradient'>
             3
           </p1>
           <Card className='w-80 h-96 bg-white/10 border-transparent backdrop-blur-md z-10 -translate-x-12'>

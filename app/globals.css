@@ -30,10 +30,7 @@ body {
   .neon-text {
     text-shadow: -1px -1px 0px cyan, 1px 1px 3px magenta;
   }
-  .neon-border {
-    border: 2px solid transparent;
-    box-shadow: 0 0 2px cyan, 0 0 5px magenta, 0 0 8px cyan, 0 0 12px magenta;
-  }
+
   .bg-overlay {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8) 70%);
   }
@@ -136,6 +133,31 @@ body {
   }
 }
 
+@keyframes neonPulse {
+  0% {
+    box-shadow:
+      0 0 5px rgb(5, 124, 172),
+      0 0 15px rgba(43, 247, 202, 0.5);
+     
+      
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px rgb(5, 124, 172),
+      0 0 10px rgba(43, 247, 202, 0.5);
+   
+   
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px rgb(5, 124, 172),
+      0 0 15px rgba(43, 247, 202, 0.5);
+  
+  }
+}
+
 .notification-shake {
   animation: shake 0.3s ease-in-out;
 }
@@ -147,6 +169,123 @@ body {
 }
 
 .bg-radial-gradient {
-  background: radial-gradient(circle, rgb(25, 25, 25) 0%, rgb(0, 0, 0) 80%);
+  /* Radial Gradient for the background */
+    background: radial-gradient(circle, rgba(25, 25, 25, 0.9) 0%, rgba(10, 10, 10, 0.9) 80%),
+      /* Horizontal and Vertical lines for the grid */
+      linear-gradient(90deg, #111111 1px, transparent 1px),
+      linear-gradient(transparent, transparent);
+  
+    /* Grid Spacing */
+    background-size: 600px 600px;
+    /* Adjust to control grid spacing */
+    background-position: left;
+    /* Ensure both gradients are centered */
+    background-blend-mode: normal;
+  
+    /* Other properties */
+    height: 100%;
+    width: 100%;
 }
 
+
+/* Gradient text */
+.text-gradient {
+
+  background: linear-gradient(80deg, rgba(5, 124, 172), rgba(43, 247, 202, 0.5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 10;
+
+}
+
+/* Container to hold the button and overlay */
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* The main button */
+.neon-border {
+  position: relative;
+  z-index: 1;
+  /* Ensure it stays below the overlay */
+  border: 2px solid transparent;
+  box-shadow:
+    0 0 5px rgb(5, 124, 172),
+    0 0 8px rgba(43, 247, 202, 0.5);
+ 
+  animation: neonPulse 3s infinite ease-in-out;
+  background-color: white;
+  /* Button background stays white */
+  color: black;
+  /* Initial text color */
+  transition: all 0.5s ease-in-out;
+}
+
+/* Overlay div */
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: white;
+  /* White background for the overlay */
+  z-index: 2;
+  /* Overlay above the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  /* Prevent overlay from blocking button clicks */
+}
+
+
+/* Transparent text that will show gradient on hover */
+.overlay-text {
+  background: white;
+  color: black;
+  font-size: 3xl;
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Hover state: Gradient text */
+.button-container button:hover + .text-overlay .overlay-text {
+  background: linear-gradient(80deg, rgb(5, 124, 172), rgba(43, 247, 202, 0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* Transparent text to allow gradient to show */
+}
+
+/* Hover State: Stop neon animation */
+.neon-border:hover {
+  animation: none;
+  /* Stop the neon animation */
+  box-shadow: none;
+  /* Remove the neon shadow */
+
+  /* Solid border */
+}
+
+.grid-background {
+  position: relative;
+  background-color: #000;
+  /* Base color of the background */
+  background-image:
+
+    /* Horizontal lines */
+    linear-gradient(90deg, #111111 1px, transparent 1px);
+  /* Vertical lines */
+  background-size: 200px 300px;
+  /* Adjust to control grid spacing */
+  height: 100%;
+  width: 100vw;
+}
+
+.gradient-bg {
+  background: linear-gradient(to right, rgba(5, 124, 172, 1), rgba(43, 247, 202, 0.5));
+}

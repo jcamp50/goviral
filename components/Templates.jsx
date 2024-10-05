@@ -7,7 +7,7 @@ export function Templates() {
     <div className='flex flex-col w-full gap-8 items-center'>
       <p1 className='text-5xl mb-10 font-medium'>
         We've perfected{' '}
-        <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
+        <span className='text-gradient'>
           viral templates
         </span>
       </p1>

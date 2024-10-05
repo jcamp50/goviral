@@ -1,8 +1,9 @@
 'use client';
 
 import * as React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
@@ -13,6 +14,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+
+import { LoginDialog } from '@/components/LoginDialog';
 
 import { Button } from '@/components/ui/button';
 
@@ -61,9 +64,10 @@ const partners = [
 ];
 
 export function Navbar() {
+  
   return (
     <div className='sticky top-0 flex bg-black/10 backdrop-blur-md h-16 w-full justify-around z-50 p-4'>
-      <div className='flex items-center text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] font-bold justify-center'>
+      <div className='flex items-center text-3xl text-gradient font-bold justify-center'>
         <a href='/'>reviral</a>
       </div>
       <NavigationMenu className='w-full max-w-none'>
@@ -133,8 +137,20 @@ export function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className='flex items-center space-x-4'>
-        <Button className='text-xl h-12'variant='outline'>Login</Button>
-        <Button className='text-xl h-12' variant='secondary'>Get started now</Button>
+        <LoginDialog
+          triggerButton={
+            <Button className='text-xl h-12' variant='outline'>
+              Login
+            </Button>
+          }
+        />
+        <LoginDialog
+          triggerButton={
+            <Button className='text-xl h-12' variant='secondary'>
+              Sign Up
+            </Button>
+          }
+        />
       </div>
     </div>
   );
@@ -153,7 +169,7 @@ const ListItem = React.forwardRef(
             )}
             {...props}
           >
-            <div className='text-lg font-semibold leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73]'>
+            <div className='text-lg font-semibold leading-none text-gradient'>
               {title}
             </div>
             <p className='line-clamp-2 text-lg leading-snug text-muted-foreground'>

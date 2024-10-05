@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export function ShowCase() {
   return (
-    <div className='h-fit bg-gradient-to-r rounded-3xl p-10 from-[#567695] to-[#7b4b73]'>
+    <div className='h-fit gradient-bg rounded-3xl p-10 '>
       <div className='flex flex-col gap-36 w-full'>
         <div className='flex flex-row'>
           <div className='flex flex-col w-1/2'>

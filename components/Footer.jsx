@@ -11,7 +11,7 @@ export function Footer() {
       {/* Separator */}
       <Separator
         orientation='horizontal'
-        className='bg-[#111111] w-[95%] mb-6'
+        className='bg-[#1e1e1e] w-[95%] mb-6'
       />
 
       {/* Two Side-by-Side Boxes */}
@@ -19,7 +19,7 @@ export function Footer() {
         {/* Left Box */}
         <div className='flex flex-col items-start w-1/2 px-6'>
           {/* Company Logo Text */}
-          <h2 className='text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#567695] to-[#7b4b73] font-bold justify-center mb-2'>
+          <h2 className='text-3xl text-gradient font-bold justify-center mb-2'>
             reviral
           </h2>
 
@@ -43,12 +43,8 @@ export function Footer() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <InstagramLogoIcon
-                alt='Instagram'
-                className='h-6 w-6'
-              />
+              <InstagramLogoIcon alt='Instagram' className='h-6 w-6' />
             </a>
-            
           </div>
         </div>
 
@@ -88,7 +84,10 @@ export function Footer() {
               >
                 Join our Discord
               </a>
-              <a href='/guide' className='text-muted-foreground hover:text-white mb-1'>
+              <a
+                href='/guide'
+                className='text-muted-foreground hover:text-white mb-1'
+              >
                 Reviral guide
               </a>
             </div>
