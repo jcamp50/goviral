@@ -20,6 +20,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 export function LoginDialog({ triggerButton }) {
   const [loginSelected, setLoginSelected] = useState(false); // State for toggling login/signup
   const [showPassword, setShowPassword] = useState(false); // State for password visibility
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const toggleLoginSelected = () => {
     setLoginSelected(true);
@@ -30,6 +32,9 @@ export function LoginDialog({ triggerButton }) {
     setShowPassword(false);
   };
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
+
+  const handlePasswordChange = (e) => setPassword(e.target.value);
+  const handleConfirmPasswordChange = (e) => setConfirmPassword(e.target.value);
 
   return (
     <Dialog>
@@ -121,19 +126,22 @@ export function LoginDialog({ triggerButton }) {
                 Password
               </Label>
               <div className='relative'>
-                <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
-                  <Image
-                    src='/images/key-icon.svg'
-                    width={15}
-                    height={15}
-                    className=''
-                    alt='Key Icon'
-                  />
-                </span>
+                {!password && (
+                  <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
+                    <Image
+                      src='/images/key-icon.svg'
+                      width={15}
+                      height={15}
+                      className=''
+                      alt='Key Icon'
+                    />
+                  </span>
+                )}
                 <Input
                   id='password'
                   type={showPassword ? 'text' : 'password'}
                   className='h-12 focus:border-white border-white/50'
+                  onChange={handlePasswordChange}
                 />
                 <Button
                   type='icon'
@@ -191,38 +199,44 @@ export function LoginDialog({ triggerButton }) {
                 Create Password
               </Label>
               <div className='relative'>
-                <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
-                  <Image
-                    src='/images/key-icon.svg'
-                    width={15}
-                    height={15}
-                    className=''
-                    alt='Key Icon'
-                  />
-                </span>
+                {!password && (
+                  <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
+                    <Image
+                      src='/images/key-icon.svg'
+                      width={15}
+                      height={15}
+                      className=''
+                      alt='Key Icon'
+                    />
+                  </span>
+                )}
                 <Input
                   id='password'
                   type={showPassword ? 'text' : 'password'}
                   className='h-12 focus:border-white border-white/50'
+                  onChange={handlePasswordChange}
                 />
               </div>
               <Label htmlFor='password' className='text-md'>
                 Confirm Password
               </Label>
               <div className='relative'>
-                <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
-                  <Image
-                    src='/images/key-icon.svg'
-                    width={15}
-                    height={15}
-                    className=''
-                    alt='Key Icon'
-                  />
-                </span>
+                {!confirmPassword && (
+                  <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
+                    <Image
+                      src='/images/key-icon.svg'
+                      width={15}
+                      height={15}
+                      className=''
+                      alt='Key Icon'
+                    />
+                  </span>
+                )}
                 <Input
                   id='password'
                   type={showPassword ? 'text' : 'password'}
                   className='h-12 focus:border-white border-white/50'
+                  onChange={handleConfirmPasswordChange}
                 />
                 <Button
                   type='icon'
@@ -274,7 +288,6 @@ export function LoginDialog({ triggerButton }) {
                 alt='Google Icon'
                 width={24}
                 height={24}
-               
               />
               {loginSelected ? 'Continue with Google' : 'Sign Up with Google'}
             </div>
