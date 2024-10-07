@@ -16,31 +16,35 @@ import Image from 'next/image';
 const reviews = [
   {
     name: 'John Doe',
-    review: "This is the best content creation tool I've ever used!",
+    review:
+      'I saw this on Instagram and it’s the best content creation tool i’ve ever used!',
     rating: 5,
     image: '/images/review1.webp',
   },
   {
     name: 'Jane Smith',
-    review: 'Easy to use and very effective for my social media content.',
+    review:
+      'Reviral makes it effortless to create high-quality TikToks that actually get engagement.',
     rating: 4,
     image: '/images/review2.webp',
   },
   {
     name: 'Alex Johnson',
-    review: 'It boosted my workflow and saved me a lot of time!',
+    review: 'I was struggling to keep up with content creation, but Reviral lets me hit one button and post.',
     rating: 5,
     image: '/images/review3.png',
   },
   {
     name: 'Emily Davis',
-    review: 'A great tool for anyone trying to create viral content.',
+    review:
+      'I’ve tried so many content creation apps, but nothing compares to Reviral.',
     rating: 4,
     image: '/images/review4.jpg',
   },
   {
     name: 'Michael Brown',
-    review: 'The AI features are outstanding and really helpful.',
+    review:
+      'Reviral does all the hard work for me, and my videos get more engagement than ever.',
     rating: 5,
     image: '/images/review5.jpg',
   },
@@ -70,12 +74,14 @@ export function Reviews() {
                 <div className='p-4'>
                   <Card className='shadow-lg h-96 flex flex-col justify-between border-[#111111] bg-[#23303D]/10 backdrop-blur-md'>
                     <CardContent className='p-6 text-white'>
-                      <p className='flex items-start justify-center text-foreground text-4xl my-4'>
-                        <span className='text-gradient text-6xl font-bold'>
+                      <p className='flex items-start justify-center text-foreground  my-4'>
+                        <span className='text-gradient font-roboto text-7xl font-bold'>
                           &ldquo;
                         </span>
-                        <span className='mx-2 font-light'>{review.review}</span>
-                        <span className='text-gradient text-6xl font-bold leading-none self-end'>
+                        <span className='mx-2 text-2xl font-normal'>
+                          {review.review}
+                        </span>
+                        <span className='text-gradient text-7xl font-roboto font-bold leading-none self-end'>
                           &rdquo;
                         </span>
                       </p>
@@ -100,7 +106,7 @@ export function Reviews() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
+          <CarouselPrevious className='z-10' />
           <CarouselNext />
         </Carousel>
       </div>
@@ -116,9 +122,9 @@ const StarRating = ({ rating }) => {
         <svg
           key={index}
           xmlns='http://www.w3.org/2000/svg'
-          fill={index < rating ? 'yellow' : 'none'}
+          fill={index < rating ? 'white' : 'none'}
           viewBox='0 0 24 24'
-          stroke='yellow'
+          stroke='white'
           strokeWidth='2'
           className='w-5 h-5'
         >
